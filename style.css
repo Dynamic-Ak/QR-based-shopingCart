@@ -1,0 +1,93 @@
+body {
+  background: linear-gradient(135deg, #f8f8ff 0%, #ede9fe 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(120deg, #fff 60%, #ede9fe 100%);
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.08), 0 1.5px 6px rgba(124, 58, 237, 0.08);
+  padding: 56px 60px 48px 60px;      /* Increased padding for a more spacious look */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;                  /* Increased max-width for a wider card */
+  width: 90vw;                       /* Use more of the viewport width */
+  min-height: 70vh;                  /* Card fills 70% of viewport height */
+  justify-content: center;
+}
+
+h2 {
+  color: #7c3aed;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+#reader {
+  margin-bottom: 28px;
+  border: 2px solid #a78bfa;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.06);
+}
+
+button {
+  background: linear-gradient(90deg, #7c3aed 60%, #a78bfa 100%);
+  color: #fff;
+  border: none;
+  padding: 16px 48px;                /* Larger button for bigger interface */
+  border-radius: 8px;
+  font-size: 1.15rem;                /* Slightly larger font */
+  font-weight: bold;
+  cursor: pointer;
+  margin: 12px 0 0 0;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.13);
+  outline: none;
+}
+
+button:hover, button:focus {
+  background: linear-gradient(90deg, #5b21b6 60%, #a78bfa 100%);
+}
+
+a {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.success-message {
+  margin-top: 18px;
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  min-height: 1.2em;
+  transition: opacity 0.3s;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 700px) {
+  .card {
+    max-width: 98vw;
+    padding: 24px 4vw 28px 4vw;
+    min-height: 60vh;
+  }
+  #reader {
+    width: 95vw !important;
+    min-width: 0;
+    max-width: 100%;
+  }
+  button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1.1rem;
+  }
+}
