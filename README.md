@@ -10,10 +10,8 @@ Built using:
 * Firebase (for storing orders)
 * LocalStorage (for cart management)
 
-Live demo link (optional): Add here if deployed
+Live demo link : 
 
-📸 Demo Preview:
-Include screenshot/gif of scanner + cart here
 
 ---
 
