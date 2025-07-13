@@ -1,62 +1,186 @@
 body {
-  background: linear-gradient(135deg, #f8f8ff 0%, #ede9fe 100%);
+  background: linear-gradient(135deg, #1345e9 0%, #e9eafe 100%);
   font-family: 'Segoe UI', Arial, sans-serif;
   min-height: 100vh;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 130px; /* To prevent content from hiding under the fixed header */
 }
 
+/* Walmart-style Header */
+.walmart-header {
+  width: 100vw;
+  background: #0071dc;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+}
+
+.logo-location {
+  display: flex;
+  align-items: center;
+}
+
+.walmart-logo {
+  height: 40px;
+  margin-right: 16px;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.pickup-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.pickup-location {
+  font-size: 0.85rem;
+  color: #ffe600;
+}
+
+/* Modern Search Bar */
+.search-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 0 0px 0 0px;
+  max-width: 540px;
+  min-width: 320px;
+  height: 44px;
+  position: relative;
+}
+
+.search-icon {
+  color: #9ca3af;
+  font-size: 1.3rem;
+  margin-right: 8px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.06rem;
+  padding: 0 0px;
+  height: 38px;
+  box-sizing: border-box;
+}
+
+
+.search-btn:hover,
+.search-btn:focus {
+  background: linear-gradient(90deg, #005cb8 60%, #0071dc 100%);
+}
+
+/* Header Navigation */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #222;
+  padding: 8px 32px;
+  gap: 24px;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.header-bottom a {
+  color: #222;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.header-bottom a:hover {
+  background: #f3f4f6;
+}
+
+/* Card Section */
 .card {
-  background: linear-gradient(120deg, #fff 60%, #ede9fe 100%);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.12), 0 2px 8px rgba(124, 58, 237, 0.08);
-  padding: 64px 80px 56px 80px;      /* More spacious look */
+  background: linear-gradient(120deg, #ffffff 60%, #ede9fe 100%);
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.08), 0 1.5px 6px rgba(124, 58, 237, 0.08);
+  padding: 56px 60px 48px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 950px;                  /* Larger on desktop */
-  width: 95vw;                       /* Use more of the viewport width */
-  min-height: 85vh;                  /* Card fills 85% of viewport height */
+  max-width: 700px;
+  width: 90vw;
+  min-height: 70vh;
   justify-content: center;
 }
 
 h2 {
-  color: #7c3aed;
-  margin-bottom: 32px;
+  color: #523aed;
+  margin-bottom: 30px;
   letter-spacing: 1px;
   font-weight: 700;
-  font-size: 2.1rem;
 }
 
 #reader {
-  margin-bottom: 32px;
-  border: 2px solid #a78bfa;
-  border-radius: 16px;
+  margin-bottom: 28px;
+  border: 2px solid #0f19c9;
+  border-radius: 12px;
   background: #fff;
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.06);
-  width: 350px;
-  max-width: 100%;
 }
 
 button {
-  background: linear-gradient(90deg, #7c3aed 60%, #a78bfa 100%);
+  background: linear-gradient(90deg, #1573ff 60%, #8b94fa 100%);
   color: #fff;
   border: none;
-  padding: 18px 54px;                /* Larger button for bigger interface */
-  border-radius: 10px;
-  font-size: 1.25rem;                /* Larger font */
+  padding: 16px 48px;
+  border-radius: 8px;
+  font-size: 1.15rem;
   font-weight: bold;
   cursor: pointer;
-  margin: 14px 0 0 0;
+  margin: 12px 0 0 0;
   transition: background 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.13);
   outline: none;
 }
 
 button:hover, button:focus {
-  background: linear-gradient(90deg, #5b21b6 60%, #a78bfa 100%);
+  background: linear-gradient(90deg, #1573ff 60%, #8b92fa 100%);
 }
 
 a {
@@ -67,41 +191,24 @@ a {
 }
 
 .success-message {
-  margin-top: 22px;
+  margin-top: 18px;
   color: #22c55e;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   text-align: center;
   min-height: 1.2em;
   transition: opacity 0.3s;
 }
 
-/* Responsive design for tablets and mobile devices */
-@media (max-width: 1100px) {
-  .card {
-    max-width: 99vw;
-    width: 99vw;
-    padding: 40px 2vw 32px 2vw;
-    min-height: 70vh;
-  }
-  #reader {
-    width: 90vw !important;
-    min-width: 0;
-    max-width: 100%;
-  }
-}
-
+/* Responsive design for mobile devices */
 @media (max-width: 700px) {
   .card {
-    max-width: 100vw;
-    width: 100vw;
-    padding: 20px 2vw 20px 2vw;
+    max-width: 98vw;
+    padding: 24px 4vw 28px 4vw;
     min-height: 60vh;
-    border-radius: 0;
-    box-shadow: none;
   }
   #reader {
-    width: 98vw !important;
+    width: 95vw !important;
     min-width: 0;
     max-width: 100%;
   }
@@ -110,8 +217,56 @@ a {
     padding: 16px 0;
     font-size: 1.1rem;
   }
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 18px;
+  .header-top, .header-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 8vw;
+    gap: 8px;
   }
+
+
+}
+
+
+.search-btn {
+  background: linear-gradient(90deg, #0071dc 60%, #005cb8 100%);
+  color: #fff;
+  border: none;
+  padding: 1px 24px;
+  border-radius: 0 22px 22px 0;
+  font-size: 1.06rem;
+  font-weight: bold;
+  cursor: pointer;
+  height: 38px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+/* remove the hover and all styles for the search button */
+.search-btn {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.search-btn {
+  background: linear-gradient(90deg, #0071dc 60%, #005cb8 100%);
+  color: #fff;
+  border: none;
+  padding: 1px 24px;
+  border-radius: 0px 22px 22px 0px;
+  font-size: 1.06rem;
+  font-weight: bold;
+  cursor: pointer;
+  height: 44px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: background 0.2s, box-shadow 0.2s;
 }
